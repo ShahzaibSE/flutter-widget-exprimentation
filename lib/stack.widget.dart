@@ -8,8 +8,11 @@ class StackDemo extends StatefulWidget {
 }
 
 class _StackDemoState extends State<StackDemo> {
+
   @override
   Widget build(BuildContext context) {
+    num width = MediaQuery.of(context).size.width;
+    print('App window width: $width');
     return Container(
       child: Stack(
         children: [
@@ -64,8 +67,8 @@ class _StackDemoState extends State<StackDemo> {
           Align(
             child: Container(
               color: Colors.yellowAccent,
-              width: 100,
-              height: 100
+              width: MediaQuery.of(context).size.height * 0.13,
+              height: MediaQuery.of(context).size.height * 0.13
             ),
             alignment: Alignment.bottomRight
           ),
