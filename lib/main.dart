@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+// Post Card.
+import 'postCard.widget.dart';
 // Stack demo widget.
 import 'stack.widget.dart';
+// Grid View Demo.
+import 'gridView.widget.dart';
+// Tab Bar Demo.
+import 'tabBarDemo.widget.dart';
 
 void main() {
   runApp(MyApp());
@@ -57,13 +63,37 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: StackDemo()
-    );
+    return TabBarDemo();
+    // return Scaffold(
+    //   drawer: Drawer(
+    //     child: ListView(
+    //       children: <Widget>[
+    //         Container(
+    //           height: 100,
+    //           child: DrawerHeader(
+    //             decoration: BoxDecoration(
+    //               color: Colors.indigoAccent
+    //             ),
+    //             child: Text('Welcome')
+    //           )
+    //         ),
+    //         ListTile(
+    //           leading: Icon(Icons.circle),
+    //           title: Text('Item #1')
+    //         ),
+    //         ListTile(
+    //           leading: Icon(Icons.circle),
+    //           title: Text('Item #2')
+    //         )
+    //       ]
+    //     )
+    //   ),
+    //   appBar: AppBar(
+    //     // Here we take the value from the MyHomePage object that was created by
+    //     // the App.build method, and use it to set our appbar title.
+    //     title: Text(widget.title),
+    //   ),
+    //   body: GridViewDemo()
+    // );
   }
 }
