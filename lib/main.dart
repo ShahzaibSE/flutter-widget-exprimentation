@@ -7,6 +7,10 @@ import 'stack.widget.dart';
 import 'gridView.widget.dart';
 // Tab Bar Demo.
 import 'tabBarDemo.widget.dart';
+// BottomNavigation. 
+import 'bottomNavigationBarDemo.widget.dart';
+// From Flutter document.
+import 'bottomNavBarSample.widget.dart';
 
 void main() {
   runApp(MyApp());
@@ -54,6 +58,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  var currentTab = 0;
+  // Current Tab Widget.
+  Widget currentScreen = GridViewDemo();
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return TabBarDemo();
+    return MyStatefulWidget();
+    // TabBarDemo();
     // return Scaffold(
     //   drawer: Drawer(
     //     child: ListView(
