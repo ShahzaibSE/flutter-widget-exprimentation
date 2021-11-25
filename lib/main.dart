@@ -70,38 +70,37 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return MyStatefulWidget();
     // TabBarDemo();
-    // return Scaffold(
-    //   drawer: Drawer(
-    //     child: ListView(
-    //       children: <Widget>[
-    //         Container(
-    //           height: 100,
-    //           child: DrawerHeader(
-    //             decoration: BoxDecoration(
-    //               color: Colors.indigoAccent
-    //             ),
-    //             child: Text('Welcome')
-    //           )
-    //         ),
-    //         ListTile(
-    //           leading: Icon(Icons.circle),
-    //           title: Text('Item #1')
-    //         ),
-    //         ListTile(
-    //           leading: Icon(Icons.circle),
-    //           title: Text('Item #2')
-    //         )
-    //       ]
-    //     )
-    //   ),
-    //   appBar: AppBar(
-    //     // Here we take the value from the MyHomePage object that was created by
-    //     // the App.build method, and use it to set our appbar title.
-    //     title: Text(widget.title),
-    //   ),
-    //   body: GridViewDemo()
-    // );
+    return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            Container(
+              height: 100,
+              child: DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.indigoAccent
+                ),
+                child: Text('Welcome')
+              )
+            ),
+            ListTile(
+              leading: Icon(Icons.circle),
+              title: Text('Item #1')
+            ),
+            ListTile(
+              leading: Icon(Icons.circle),
+              title: Text('Item #2')
+            )
+          ]
+        )
+      ),
+      appBar: AppBar(
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
+        title: Text(widget.title),
+      ),
+      body: GridViewDemo()
+    );
   }
 }
